@@ -1,0 +1,1 @@
+SELECT (name || '_' || country) as city_country, (population / area) as number_of_people_per_square FROM cities;

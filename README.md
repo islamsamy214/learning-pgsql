@@ -109,4 +109,18 @@ SELECT * FROM table_name;
 
 In this syntax, the asterisk (*) is a wildcard character that represents all columns of the table.
 
-## Update Data
+### Math Operators
+
+You can use the following math operators in the `SELECT` statement to perform arithmetic operations:
+
+- `+` for addition
+- `-` for subtraction
+- `*` for multiplication
+- `/` for division
+- `%` for modulor
+- `^` for exponentiation
+- `|/` for square root
+- `||/` for cube root
+- `!!` for factorial
+- `@` for absolute value
+- `||` for concatenation
