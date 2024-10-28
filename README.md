@@ -84,3 +84,29 @@ VALUES
     (value4, value5, value6, …),
     …;
 ```
+## Fetch Data
+
+To query data from a table in PostgreSQL, you use the `SELECT` statement. The following illustrates the basic syntax of the `SELECT` statement:
+
+```sql
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table_name;
+```
+
+In this syntax:
+- column1, column2, … are the columns of the table that you want to retrieve data from.
+- table_name is the name of the table that you want to query data from.
+
+If you want to retrieve data from all columns of the table, you use the following syntax:
+
+```sql
+SELECT * FROM table_name;
+```
+
+In this syntax, the asterisk (*) is a wildcard character that represents all columns of the table.
+
+## Update Data
