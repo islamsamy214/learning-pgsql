@@ -124,3 +124,15 @@ You can use the following math operators in the `SELECT` statement to perform ar
 - `!!` for factorial
 - `@` for absolute value
 - `||` for concatenation
+
+### String Functions
+
+PostgreSQL provides a variety of string functions that allow you to manipulate strings. Here are some common string functions:
+
+- `LENGTH(string)`: Returns the length of the string.
+- `UPPER(string)`: Converts the string to uppercase.
+- `LOWER(string)`: Converts the string to lowercase.
+- `TRIM([leading|trailing|both] [characters] from string)`: Removes the specified characters from the beginning, end, or both ends of the string.
+- `POSITION(substring IN string)`: Returns the position of the substring in the string.
+- `SUBSTRING(string FROM start [FOR length])`: Extracts a substring from the string.
+- `CONCAT(string1, string2)`: Concatenates two strings.
