@@ -67,3 +67,20 @@ BOOLEAN: A true or false value.
 SERIAL: An auto-incrementing four-byte integer.
 In addition to the basic data types, PostgreSQL provides several special-purpose data types such as geometric, network address, and monetary data types.
 
+## Insert Data
+
+To insert data into a table in PostgreSQL, you use the `INSERT INTO` statement. The following illustrates the syntax of the `INSERT INTO` statement:
+
+```sql
+INSERT INTO table_name (column1, column2, column3, …)
+VALUES (value1, value2, value3, …);
+```
+btw, you can insert multiple rows into a table with a single `INSERT` statement as follows:
+
+```sql
+INSERT INTO table_name (column1, column2, column3, …)
+VALUES
+    (value1, value2, value3, …),
+    (value4, value5, value6, …),
+    …;
+```
