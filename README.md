@@ -67,6 +67,18 @@ BOOLEAN: A true or false value.
 SERIAL: An auto-incrementing four-byte integer.
 In addition to the basic data types, PostgreSQL provides several special-purpose data types such as geometric, network address, and monetary data types.
 
+### Constraints
+
+Constraints are rules that enforce the integrity of the data stored in the table. PostgreSQL provides several types of constraints that you can add to a table:
+
+- `NOT NULL`: Ensures that a column cannot have a NULL value.
+- `UNIQUE`: Ensures that all values in a column are unique.
+- `PRIMARY KEY`: A combination of `NOT NULL` and `UNIQUE`. It uniquely identifies each row in a table.
+- `FOREIGN KEY`: Ensures that the values in a column match the values in another table’s column.
+- `CHECK`: Ensures that all values in a column satisfy a specified condition.
+- `DEFAULT`: Provides a default value for a column when no value is specified.
+- `INDEX`: Improves the performance of queries by allowing them to retrieve data more quickly.
+
 ## Insert Data
 
 To insert data into a table in PostgreSQL, you use the `INSERT INTO` statement. The following illustrates the syntax of the `INSERT INTO` statement:
