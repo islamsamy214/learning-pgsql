@@ -79,6 +79,30 @@ Constraints are rules that enforce the integrity of the data stored in the table
 - `DEFAULT`: Provides a default value for a column when no value is specified.
 - `INDEX`: Improves the performance of queries by allowing them to retrieve data more quickly.
 
+### On Delete/Update Options
+
+When you define a foreign key constraint, you can specify the `ON DELETE` and `ON UPDATE` options to define the action that the database should take when a referenced row is deleted or updated. The following options are available:
+
+- `CASCADE`: Deletes or updates the rows in the child table when the referenced row is deleted or updated.
+- `SET NULL`: Sets the foreign key column in the child table to NULL when the referenced row is deleted or updated.
+- `RESTRICT`: Prevents the deletion or update of the referenced row if there are any related rows in the child table.
+- `NO ACTION`: The same as `RESTRICT`. It prevents the deletion or update of the referenced row if there are any related rows in the child table.
+
+Here’s an example that creates a foreign key constraint with the `ON DELETE CASCADE` option:
+
+```sql
+CREATE TABLE orders (
+    order_id SERIAL PRIMARY KEY,
+    product_id INTEGER,
+    quantity INTEGER,
+    FOREIGN KEY (product_id)
+        REFERENCES products (product_id)
+        ON DELETE CASCADE
+);
+```
+
+In this example, the `ON DELETE CASCADE` option specifies that when a row in the `products` table is deleted, all related rows in the `orders` table will also be deleted.
+
 ## Insert Data
 
 To insert data into a table in PostgreSQL, you use the `INSERT INTO` statement. The following illustrates the syntax of the `INSERT INTO` statement:
