@@ -216,3 +216,18 @@ In this syntax:
 - table_name is the name of the table that you want to update data in.
 - column1, column2, … are the columns that you want to update.
 - value1, value2, … are the new values that you want to set for the columns.
+
+## Delete Data
+
+To delete data from a table in PostgreSQL, you use the `DELETE` statement. The following illustrates the basic syntax of the `DELETE` statement:
+
+```sql
+DELETE FROM table_name
+WHERE condition;
+```
+
+In this syntax:
+- table_name is the name of the table that you want to delete data from.
+- condition is a boolean expression that evaluates to true or false.
+
+The `DELETE` statement deletes all rows from the table that satisfy the condition. If you omit the `WHERE` clause, the `DELETE` statement will delete all rows from the table.
