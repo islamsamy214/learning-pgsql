@@ -231,3 +231,36 @@ In this syntax:
 - condition is a boolean expression that evaluates to true or false.
 
 The `DELETE` statement deletes all rows from the table that satisfy the condition. If you omit the `WHERE` clause, the `DELETE` statement will delete all rows from the table.
+
+## Aggregate Functions
+
+PostgreSQL provides a variety of aggregate functions that allow you to perform calculations on a set of values. Here are some common aggregate functions:
+
+- `COUNT()`: Returns the number of rows in a group.
+- `SUM()`: Returns the sum of values in a group.
+- `AVG()`: Returns the average of values in a group.
+- `MIN()`: Returns the minimum value in a group.
+- `MAX()`: Returns the maximum value in a group.
+
+You can use aggregate functions in the `SELECT` statement to calculate summary statistics for a group of rows. Here’s an example that calculates the total number of employees in the `employees` table:
+
+```sql
+SELECT COUNT(*) AS total_employees
+FROM employees;
+```
+
+In this example, the `COUNT()` function calculates the total number of rows in the `employees` table. The `AS` keyword is used to alias the result of the aggregate function as `total_employees`.
+
+## Group Data
+
+To group data in PostgreSQL, you use the `GROUP BY` clause in the `SELECT` statement. The `GROUP BY` clause divides the rows returned by the `SELECT` statement into groups. The following illustrates the basic syntax of the `SELECT` statement with the `GROUP BY` clause:
+
+```sql
+SELECT
+    column1,
+    aggregate_function(column2)
+FROM
+    table_name
+GROUP BY
+    column1;
+```
