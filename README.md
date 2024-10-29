@@ -137,6 +137,21 @@ PostgreSQL provides a variety of string functions that allow you to manipulate s
 - `SUBSTRING(string FROM start [FOR length])`: Extracts a substring from the string.
 - `CONCAT(string1, string2)`: Concatenates two strings.
 
+### Math Functions
+
+PostgreSQL provides a variety of math functions that allow you to perform mathematical operations. Here are some common math functions:
+
+- `ABS(number)`: Returns the absolute value of the number.
+- `CEIL(number)`: Returns the smallest integer greater than or equal to the number.
+- `FLOOR(number)`: Returns the largest integer less than or equal to the number.
+- `ROUND(number, decimal_places)`: Rounds the number to the specified number of decimal places.
+- `SQRT(number)`: Returns the square root of the number.
+- `CBRT(number)`: Returns the cube root of the number.
+- `POWER(base, exponent)`: Returns the base raised to the exponent.
+- `MOD(dividend, divisor)`: Returns the remainder of the division of the dividend by the divisor.
+- `RANDOM()`: Returns a random number between 0 and 1.
+- `TRUNC(number, decimal_places)`: Truncates the number to the specified number of decimal places.
+
 ## Filter Data
 
 To filter data in PostgreSQL, you use the `WHERE` clause in the `SELECT` statement. The following illustrates the basic syntax of the `SELECT` statement with the `WHERE` clause:
