@@ -136,3 +136,51 @@ PostgreSQL provides a variety of string functions that allow you to manipulate s
 - `POSITION(substring IN string)`: Returns the position of the substring in the string.
 - `SUBSTRING(string FROM start [FOR length])`: Extracts a substring from the string.
 - `CONCAT(string1, string2)`: Concatenates two strings.
+
+## Filter Data
+
+To filter data in PostgreSQL, you use the `WHERE` clause in the `SELECT` statement. The following illustrates the basic syntax of the `SELECT` statement with the `WHERE` clause:
+
+```sql
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table_name
+WHERE
+    condition;
+```
+
+In this syntax:
+- column1, column2, … are the columns of the table that you want to retrieve data from.
+- table_name is the name of the table that you want to query data from.
+- condition is a boolean expression that evaluates to true or false.
+
+The `WHERE` clause allows you to filter rows based on a specified condition. If the condition evaluates to true, the row is included in the result set; otherwise, it is excluded.
+
+### Comparison Operators
+
+PostgreSQL provides a variety of comparison operators that allow you to compare values. Here are some common comparison operators:
+
+- `=`: Equal to
+- `<>` or `!=`: Not equal to
+- `>`: Greater than
+- `<`: Less than
+- `>=`: Greater than or equal to
+- `<=`: Less than or equal to
+- `BETWEEN`: Between an inclusive range
+- `IN`: In a specified list
+- `NOT IN`: Not in a specified list
+- `LIKE`: Similar to a specified pattern
+- `ILIKE`: Case-insensitive version of `LIKE`
+- `IS NULL`: Is a null value
+- `IS NOT NULL`: Is not a null value
+
+### Logical Operators
+
+PostgreSQL provides several logical operators that allow you to combine multiple conditions. Here are some common logical operators:
+
+- `AND`: Returns true if both conditions are true
+- `OR`: Returns true if either condition is true
+- `NOT`: Returns true if the condition is false
