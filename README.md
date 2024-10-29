@@ -199,3 +199,20 @@ PostgreSQL provides several logical operators that allow you to combine multiple
 - `AND`: Returns true if both conditions are true
 - `OR`: Returns true if either condition is true
 - `NOT`: Returns true if the condition is false
+
+## Update Data
+
+To update data in a table in PostgreSQL, you use the `UPDATE` statement. The following illustrates the basic syntax of the `UPDATE` statement:
+
+```sql
+UPDATE table_name
+SET column1 = value1,
+    column2 = value2,
+    ...
+WHERE condition;
+``` 
+
+In this syntax:
+- table_name is the name of the table that you want to update data in.
+- column1, column2, … are the columns that you want to update.
+- value1, value2, … are the new values that you want to set for the columns.
