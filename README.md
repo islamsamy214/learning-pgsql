@@ -339,6 +339,30 @@ In this syntax:
 
 The `HAVING` clause filters groups based on a specified condition. If the condition evaluates to true, the group is included in the result set; otherwise, it is excluded.
 
+## Order Data
+
+To order data in PostgreSQL, you use the `ORDER BY` clause in the `SELECT` statement. The `ORDER BY` clause sorts the rows returned by the `SELECT` statement. The following illustrates the basic syntax of the `SELECT` statement with the `ORDER BY` clause:
+
+```sql
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table_name
+ORDER BY
+    column1 [ASC|DESC],
+    column2 [ASC|DESC],
+    ...;
+```
+
+In this syntax:
+
+- column1, column2, … are the columns that you want to sort by, it will sort by the first column first, then the second column, and so on.
+- table_name is the name of the table that you want to query data from.
+- ASC is the ascending order (default).
+- DESC is the descending order.
+
 ## Joining Tables
 
 In PostgreSQL, you can join two or more tables to query data from multiple tables. The following illustrates the basic syntax of the `SELECT` statement with the `JOIN` clause:
