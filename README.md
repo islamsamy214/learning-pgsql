@@ -300,3 +300,32 @@ FROM
 GROUP BY
     column1;
 ```
+
+## Joining Tables
+
+In PostgreSQL, you can join two or more tables to query data from multiple tables. The following illustrates the basic syntax of the `SELECT` statement with the `JOIN` clause:
+
+```sql
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table1
+JOIN
+    table2 ON table1.column_name = table2.column_name;
+```
+
+In this syntax:
+- table1, table2 are the names of the tables that you want to join.
+- column1, column2, … are the columns that you want to retrieve data from.
+- column_name is the column that you want to join the tables on.
+
+### Types of Joins
+
+PostgreSQL supports several types of joins that allow you to combine rows from two or more tables. Here are some common types of joins:
+
+- `INNER JOIN` or `JOIN`: Returns rows when there is a match in both tables.
+- `LEFT JOIN` or `LEFT OUTER JOIN`: Returns all rows from the left table and the matched rows from the right table.
+- `RIGHT JOIN` or `RIGHT OUTER JOIN`: Returns all rows from the right table and the matched rows from the left table.
+- `FULL JOIN` or `FULL OUTER JOIN`: Returns rows when there is a match in one of the tables.
