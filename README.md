@@ -420,3 +420,33 @@ In this syntax:
 - offset is the number of rows to skip before starting to return rows.
 
 The `LIMIT` clause allows you to limit the number of rows returned by a query. The `OFFSET` clause allows you to skip a specified number of rows before starting to return rows.
+
+## Unions
+
+In PostgreSQL, you can combine the results of two or more queries using the `UNION` operator. The `UNION` operator removes duplicate rows from the result set. The following illustrates the basic syntax of the `UNION` operator:
+
+```sql
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table1
+UNION -- or `UNION ALL` to keep duplicates
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table2;
+```
+
+In this syntax:
+
+- column1, column2, … are the columns that you want to retrieve data from.
+- table1, table2 are the names of the tables that you want to query data from.
+- `UNION` removes duplicate rows from the result set.
+- `UNION ALL` keeps duplicate rows in the result set.
+- The number of columns and their data types must match in all queries.
+
+The `UNION` operator allows you to combine the results of two or more queries into a single result set. The `UNION ALL` operator allows you to combine the results of two or more queries into a single result set, including duplicate rows.
