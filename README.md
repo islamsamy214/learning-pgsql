@@ -301,6 +301,15 @@ GROUP BY
     column1;
 ```
 
+In this syntax:
+- column1 is the column that you want to group by.
+- aggregate_function(column2) is an aggregate function that calculates summary statistics for each group.
+- table_name is the name of the table that you want to query data from.
+
+The `GROUP BY` clause divides the rows returned by the `SELECT` statement into groups based on the values in the specified column. The aggregate function calculates summary statistics for each group.
+
+
+
 ## Joining Tables
 
 In PostgreSQL, you can join two or more tables to query data from multiple tables. The following illustrates the basic syntax of the `SELECT` statement with the `JOIN` clause:
