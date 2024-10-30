@@ -392,3 +392,31 @@ PostgreSQL supports several types of joins that allow you to combine rows from t
 - `LEFT JOIN` or `LEFT OUTER JOIN`: Returns all rows from the left table and the matched rows from the right table.
 - `RIGHT JOIN` or `RIGHT OUTER JOIN`: Returns all rows from the right table and the matched rows from the left table.
 - `FULL JOIN` or `FULL OUTER JOIN`: Returns rows when there is a match in one of the tables.
+
+## Pagination
+
+To limit the number of rows returned by a query in PostgreSQL, you use the `LIMIT` clause. The `LIMIT` clause is typically used with the `ORDER BY` clause to sort the rows before limiting the number of rows returned. The following illustrates the basic syntax of the `SELECT` statement with the `LIMIT` clause:
+
+```sql
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table_name
+ORDER BY
+    column1
+LIMIT
+    row_count
+OFFSET
+    offset;
+```
+
+In this syntax:
+
+- column1, column2, … are the columns that you want to retrieve data from.
+- table_name is the name of the table that you want to query data from.
+- row_count is the maximum number of rows to return.
+- offset is the number of rows to skip before starting to return rows.
+
+The `LIMIT` clause allows you to limit the number of rows returned by a query. The `OFFSET` clause allows you to skip a specified number of rows before starting to return rows.
