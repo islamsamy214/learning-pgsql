@@ -32,7 +32,6 @@ CREATE DATABASE my_database TEMPLATE template1;
 
 By choosing `template0`, you have more flexibility with encoding and collation settings, especially in cases where `template1` imposes a default setting that might be incompatible with what you need.
 
-
 ## Create Table
 
 To create a new table in PostgreSQL, you use the `CREATE TABLE` statement. The following illustrates the basic syntax of the `CREATE TABLE` statement:
@@ -111,6 +110,7 @@ To insert data into a table in PostgreSQL, you use the `INSERT INTO` statement. 
 INSERT INTO table_name (column1, column2, column3, …)
 VALUES (value1, value2, value3, …);
 ```
+
 btw, you can insert multiple rows into a table with a single `INSERT` statement as follows:
 
 ```sql
@@ -120,6 +120,7 @@ VALUES
     (value4, value5, value6, …),
     …;
 ```
+
 ## Fetch Data
 
 To query data from a table in PostgreSQL, you use the `SELECT` statement. The following illustrates the basic syntax of the `SELECT` statement:
@@ -134,6 +135,7 @@ FROM
 ```
 
 In this syntax:
+
 - column1, column2, … are the columns of the table that you want to retrieve data from.
 - table_name is the name of the table that you want to query data from.
 
@@ -143,7 +145,7 @@ If you want to retrieve data from all columns of the table, you use the followin
 SELECT * FROM table_name;
 ```
 
-In this syntax, the asterisk (*) is a wildcard character that represents all columns of the table.
+In this syntax, the asterisk (\*) is a wildcard character that represents all columns of the table.
 
 ### Math Operators
 
@@ -204,6 +206,7 @@ WHERE
 ```
 
 In this syntax:
+
 - column1, column2, … are the columns of the table that you want to retrieve data from.
 - table_name is the name of the table that you want to query data from.
 - condition is a boolean expression that evaluates to true or false.
@@ -246,9 +249,10 @@ SET column1 = value1,
     column2 = value2,
     ...
 WHERE condition;
-``` 
+```
 
 In this syntax:
+
 - table_name is the name of the table that you want to update data in.
 - column1, column2, … are the columns that you want to update.
 - value1, value2, … are the new values that you want to set for the columns.
@@ -263,6 +267,7 @@ WHERE condition;
 ```
 
 In this syntax:
+
 - table_name is the name of the table that you want to delete data from.
 - condition is a boolean expression that evaluates to true or false.
 
@@ -302,13 +307,37 @@ GROUP BY
 ```
 
 In this syntax:
+
 - column1 is the column that you want to group by.
 - aggregate_function(column2) is an aggregate function that calculates summary statistics for each group.
 - table_name is the name of the table that you want to query data from.
 
 The `GROUP BY` clause divides the rows returned by the `SELECT` statement into groups based on the values in the specified column. The aggregate function calculates summary statistics for each group.
 
+### HAVING Clause
 
+The `HAVING` clause allows you to filter groups based on a specified condition. The following illustrates the basic syntax of the `SELECT` statement with the `GROUP BY` and `HAVING` clauses:
+
+```sql
+SELECT
+    column1,
+    aggregate_function(column2)
+FROM
+    table_name
+GROUP BY
+    column1
+HAVING
+    condition;
+```
+
+In this syntax:
+
+- column1 is the column that you want to group by.
+- aggregate_function(column2) is an aggregate function that calculates summary statistics for each group.
+- table_name is the name of the table that you want to query data from.
+- condition is a boolean expression that evaluates to true or false.
+
+The `HAVING` clause filters groups based on a specified condition. If the condition evaluates to true, the group is included in the result set; otherwise, it is excluded.
 
 ## Joining Tables
 
@@ -326,6 +355,7 @@ JOIN
 ```
 
 In this syntax:
+
 - table1, table2 are the names of the tables that you want to join.
 - column1, column2, … are the columns that you want to retrieve data from.
 - column_name is the column that you want to join the tables on.
