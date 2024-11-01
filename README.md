@@ -450,3 +450,59 @@ In this syntax:
 - The number of columns and their data types must match in all queries.
 
 The `UNION` operator allows you to combine the results of two or more queries into a single result set. The `UNION ALL` operator allows you to combine the results of two or more queries into a single result set, including duplicate rows.
+
+## Intersections
+
+In PostgreSQL, you can find the intersection of two or more queries using the `INTERSECT` operator. The `INTERSECT` operator returns rows that are common to all queries. The following illustrates the basic syntax of the `INTERSECT` operator:
+
+```sql
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table1
+INTERSECT -- or `INTERSECT ALL` to keep duplicates
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table2;
+```
+
+In this syntax:
+
+- column1, column2, … are the columns that you want to retrieve data from.
+- table1, table2 are the names of the tables that you want to query data from.
+- The number of columns and their data types must match in all queries.
+
+The `INTERSECT` operator allows you to find the intersection of two or more queries. It returns rows that are common to all queries.
+
+## Differences
+
+In PostgreSQL, you can find the difference between two or more queries using the `EXCEPT` operator. The `EXCEPT` operator returns rows that are in the first query but not in the second query. The following illustrates the basic syntax of the `EXCEPT` operator:
+
+```sql
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table1
+EXCEPT -- or `EXCEPT ALL` to keep duplicates
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+table2;
+```
+
+In this syntax:
+
+- column1, column2, … are the columns that you want to retrieve data from.
+- table1, table2 are the names of the tables that you want to query data from.
+- The number of columns and their data types must match in all queries.
+
+The `EXCEPT` operator allows you to find the difference between two or more queries. It returns rows that are in the first query but not in the second query.
