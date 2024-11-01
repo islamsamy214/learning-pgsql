@@ -2,7 +2,7 @@ SELECT name, area
 FROM cities
 WHERE name IN (
         SELECT name FROM cities
-    ) -- when its in where condition the return has to be a single column
+    ) -- when its in where condition the return has to be a single column because it is used in IN clause, any other operator can be used but the return has to be a single value
 
 SELECT name, (SELECT COUNT(*) FROM cities) -- when it is in select statement the return has to be a single value, one column and one row
 FROM cities
