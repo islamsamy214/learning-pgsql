@@ -230,6 +230,10 @@ PostgreSQL provides a variety of comparison operators that allow you to compare 
 - `ILIKE`: Case-insensitive version of `LIKE`
 - `IS NULL`: Is a null value
 - `IS NOT NULL`: Is not a null value
+- `IS DISTINCT FROM`: Is distinct from a specified value
+- `IS NOT DISTINCT FROM`: Is not distinct from a specified value
+- `ANY` or `SOME`: Compares a value to any value in a list
+- `ALL`: Compares a value to all values in a list
 
 ### Logical Operators
 
