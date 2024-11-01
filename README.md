@@ -189,6 +189,8 @@ PostgreSQL provides a variety of math functions that allow you to perform mathem
 - `MOD(dividend, divisor)`: Returns the remainder of the division of the dividend by the divisor.
 - `RANDOM()`: Returns a random number between 0 and 1.
 - `TRUNC(number, decimal_places)`: Truncates the number to the specified number of decimal places.
+- `GREATEST(value1, value2, …)`: Returns the greatest value from a list of values.
+- `LEAST(value1, value2, …)`: Returns the least value from a list of values.
 
 ## Filter Data
 
