@@ -506,3 +506,24 @@ In this syntax:
 - The number of columns and their data types must match in all queries.
 
 The `EXCEPT` operator allows you to find the difference between two or more queries. It returns rows that are in the first query but not in the second query.
+
+## Subqueries
+
+In PostgreSQL, you can nest one query inside another query to perform more complex queries. A query that contains another query is called a subquery. The following illustrates the basic syntax of a subquery:
+
+```sql
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table_name
+WHERE
+    column1 IN (SELECT column1 FROM table_name WHERE condition);
+```
+
+In this syntax:
+
+- column1, column2, … are the columns that you want to retrieve data from.
+- table_name is the name of the table that you want to query data from.
+- condition is a boolean expression that evaluates to true or false.
