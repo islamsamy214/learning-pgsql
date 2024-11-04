@@ -74,7 +74,7 @@ Constraints are rules that enforce the integrity of the data stored in the table
 - `UNIQUE`: Ensures that all values in a column are unique.
 - `PRIMARY KEY`: A combination of `NOT NULL` and `UNIQUE`. It uniquely identifies each row in a table.
 - `FOREIGN KEY`: Ensures that the values in a column match the values in another table’s column.
-- `CHECK`: Ensures that all values in a column satisfy a specified condition.
+- `CHECK`: Ensures that all values in a column satisfy a specified condition, it works with operators like `=`, `>`, `<`, `>=`, `<=`, `<>`, `BETWEEN`, `LIKE`, `IN`, and `IS NULL`.
 - `DEFAULT`: Provides a default value for a column when no value is specified.
 - `INDEX`: Improves the performance of queries by allowing them to retrieve data more quickly.
 
