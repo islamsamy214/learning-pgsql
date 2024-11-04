@@ -245,6 +245,26 @@ PostgreSQL provides several logical operators that allow you to combine multiple
 - `OR`: Returns true if either condition is true
 - `NOT`: Returns true if the condition is false
 
+### Case Expression
+
+The `CASE` expression allows you to add conditional logic to a query. It evaluates a list of conditions and returns one of multiple possible result expressions. The following illustrates the basic syntax of the `CASE` expression:
+
+```sql
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    ...
+    ELSE result
+END
+```
+
+In this syntax:
+
+- condition1, condition2, … are the conditions that you want to evaluate.
+- result1, result2, … are the result expressions that you want to return.
+- result is the default result expression if none of the conditions are true.
+
+
 ## Update Data
 
 To update data in a table in PostgreSQL, you use the `UPDATE` statement. The following illustrates the basic syntax of the `UPDATE` statement:
