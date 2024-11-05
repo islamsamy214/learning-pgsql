@@ -71,7 +71,7 @@ In addition to the basic data types, PostgreSQL provides several special-purpose
 Constraints are rules that enforce the integrity of the data stored in the table. PostgreSQL provides several types of constraints that you can add to a table:
 
 - `NOT NULL`: Ensures that a column cannot have a NULL value.
-- `UNIQUE`: Ensures that all values in a column are unique.
+- `UNIQUE`: Ensures that all values in a column are unique, if you used it like this `UNIQUE (column1, column2, …)`, it will ensure that the combination of values in the specified columns is unique.
 - `PRIMARY KEY`: A combination of `NOT NULL` and `UNIQUE`. It uniquely identifies each row in a table.
 - `FOREIGN KEY`: Ensures that the values in a column match the values in another table’s column.
 - `CHECK`: Ensures that all values in a column satisfy a specified condition, it works with operators like `=`, `>`, `<`, `>=`, `<=`, `<>`, `BETWEEN`, `LIKE`, `IN`, and `IS NULL`.
