@@ -65,6 +65,7 @@ TIMESTAMP: A date and time value in the format YYYY-MM-DD HH:MI:SS.
 BOOLEAN: A true or false value.
 SERIAL: An auto-incrementing four-byte integer.
 In addition to the basic data types, PostgreSQL provides several special-purpose data types such as geometric, network address, and monetary data types.
+REAL: A single-precision floating-point number, it just caring about the 6 digits after the decimal point to be percise, if more than that, it will work aROUND it.
 
 ### Constraints
 
