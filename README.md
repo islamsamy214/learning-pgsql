@@ -265,7 +265,6 @@ In this syntax:
 - result1, result2, … are the result expressions that you want to return.
 - result is the default result expression if none of the conditions are true.
 
-
 ## Update Data
 
 To update data in a table in PostgreSQL, you use the `UPDATE` statement. The following illustrates the basic syntax of the `UPDATE` statement:
@@ -571,6 +570,8 @@ In this syntax:
 - column1, column2, … are the columns that the index will be created on.
 
 Indexes can be created on one or more columns of a table. When you create an index on a column, PostgreSQL creates a separate data structure that stores the values of that column in sorted order. This allows PostgreSQL to quickly locate rows based on the values in the indexed column.
+
+NOTICE: PostgreSQL automatically creates an index for the `primary key` and `unique` constraints columns of a table. You can also create indexes manually to improve the performance of queries that filter, sort, or join data.
 
 ## Benchmarks
 
