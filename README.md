@@ -571,3 +571,28 @@ In this syntax:
 - column1, column2, … are the columns that the index will be created on.
 
 Indexes can be created on one or more columns of a table. When you create an index on a column, PostgreSQL creates a separate data structure that stores the values of that column in sorted order. This allows PostgreSQL to quickly locate rows based on the values in the indexed column.
+
+## Benchmarks
+
+In PostgreSQL, you can use the `EXPLAIN` statement to analyze the execution plan of a query. The `EXPLAIN` statement shows how PostgreSQL will execute a query, including the order in which tables will be accessed and the types of joins that will be used. The following illustrates the basic syntax of the `EXPLAIN` statement:
+
+```sql
+EXPLAIN ANALYSE SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table_name
+WHERE
+    condition;
+```
+
+In this syntax:
+
+- column1, column2, … are the columns that you want to retrieve data from.
+- table_name is the name of the table that you want to query data from.
+- condition is a boolean expression that evaluates to true or false.
+
+The `EXPLAIN` statement provides valuable information about how PostgreSQL will execute a query. It can help you identify performance bottlenecks and optimize your queries for better performance.
+
+The `ANALYSE` option tells PostgreSQL to actually execute the query and provide detailed performance statistics. This can help you identify slow queries and optimize them for better performance.
