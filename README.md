@@ -554,3 +554,20 @@ In this syntax:
 - column1, column2, … are the columns that you want to retrieve data from.
 - table_name is the name of the table that you want to query data from.
 - condition is a boolean expression that evaluates to true or false.
+
+## Indexes
+
+In PostgreSQL, an index is a data structure that improves the speed of data retrieval operations on a table. Indexes are used to quickly locate data without having to search every row in a table. The following illustrates the basic syntax of creating an index:
+
+```sql
+CREATE INDEX index_name
+ON table_name (column1, column2, ...);
+```
+
+In this syntax:
+
+- index_name is the name of the index.
+- table_name is the name of the table that the index will be created on.
+- column1, column2, … are the columns that the index will be created on.
+
+Indexes can be created on one or more columns of a table. When you create an index on a column, PostgreSQL creates a separate data structure that stores the values of that column in sorted order. This allows PostgreSQL to quickly locate rows based on the values in the indexed column.
