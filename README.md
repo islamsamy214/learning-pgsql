@@ -597,3 +597,35 @@ In this syntax:
 The `EXPLAIN` statement provides valuable information about how PostgreSQL will execute a query. It can help you identify performance bottlenecks and optimize your queries for better performance.
 
 The `ANALYSE` option tells PostgreSQL to actually execute the query and provide detailed performance statistics. This can help you identify slow queries and optimize them for better performance.
+
+## Common Table Expressions 
+
+In PostgreSQL, you can use common table expressions (CTEs) to define temporary result sets that can be used in subsequent queries. CTEs are useful for breaking down complex queries into smaller, more manageable parts. The following illustrates the basic syntax of a CTE:
+
+```sql
+WITH cte_name AS (
+    SELECT
+        column1,
+        column2,
+        ...
+    FROM
+        table_name
+    WHERE
+        condition
+)
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    cte_name;
+```
+
+In this syntax:
+
+- cte_name is the name of the common table expression.
+- column1, column2, … are the columns that you want to retrieve data from.
+- table_name is the name of the table that you want to query data from.
+- condition is a boolean expression that evaluates to true or false.
+
+CTEs allow you to define temporary result sets that can be used in subsequent queries. They are useful for breaking down complex queries into smaller, more manageable parts.
