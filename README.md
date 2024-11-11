@@ -629,3 +629,44 @@ In this syntax:
 - condition is a boolean expression that evaluates to true or false.
 
 CTEs allow you to define temporary result sets that can be used in subsequent queries. They are useful for breaking down complex queries into smaller, more manageable parts.
+
+## Recursive Common Table Expressions
+
+In PostgreSQL, you can use recursive common table expressions (CTEs) to define recursive queries that reference themselves. Recursive CTEs are useful for querying hierarchical data structures, such as organization charts or bill of materials. The following illustrates the basic syntax of a recursive CTE:
+
+```sql
+WITH RECURSIVE cte_name AS (
+    SELECT
+        column1,
+        column2,
+        ...
+    FROM
+        table_name
+    WHERE
+        condition
+    UNION ALL
+    SELECT
+        column1,
+        column2,
+        ...
+    FROM
+        cte_name
+    WHERE
+        condition
+)
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    cte_name;
+```
+
+In this syntax:
+
+- cte_name is the name of the recursive common table expression.
+- column1, column2, … are the columns that you want to retrieve data from.
+- table_name is the name of the table that you want to query data from.
+- condition is a boolean expression that evaluates to true or false.
+
+Recursive CTEs allow you to define recursive queries that reference themselves. They are useful for querying hierarchical data structures, such as organization charts or bill of materials.
