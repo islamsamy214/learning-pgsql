@@ -122,6 +122,15 @@ VALUES
     …;
 ```
 
+you can also insert from another table as follows:
+
+```sql
+INSERT INTO table_name (column1, column2, column3, …)
+SELECT column1, column2, column3, …
+FROM another_table
+WHERE condition;
+``` 
+
 ## Fetch Data
 
 To query data from a table in PostgreSQL, you use the `SELECT` statement. The following illustrates the basic syntax of the `SELECT` statement:
