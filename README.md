@@ -739,3 +739,30 @@ REFRESH MATERIALIZED VIEW view_name;
 ```
 
 Materialized views are useful for improving the performance of queries that involve complex calculations or aggregations. They can help reduce the time it takes to execute queries by precomputing results and storing them on disk.
+
+## Transactions
+
+In PostgreSQL, a transaction is a sequence of one or more SQL statements that are executed as a single unit of work. Transactions allow you to group multiple statements together and ensure that they are executed atomically. The following illustrates the basic syntax of a transaction:
+
+```sql
+BEGIN;
+-- SQL statements
+COMMIT;
+```
+
+In this syntax:
+
+- `BEGIN` starts a new transaction.
+- `COMMIT` commits the transaction and makes the changes permanent.
+
+Transactions allow you to group multiple statements together and ensure that they are executed atomically. If any statement in the transaction fails, the entire transaction is rolled back, and the changes are discarded.
+
+If you want to discard the changes made in a transaction, you can use the `ROLLBACK` statement:
+
+```sql
+BEGIN;
+-- SQL statements
+ROLLBACK;
+```
+
+The `ROLLBACK` statement discards the changes made in the transaction and rolls back to the beginning of the transaction.
