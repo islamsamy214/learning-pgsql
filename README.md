@@ -704,3 +704,38 @@ In this syntax:
 - condition is a boolean expression that evaluates to true or false.
 
 Views allow you to encapsulate complex queries and reuse them in other queries. They are useful for simplifying queries and improving performance by precomputing results.
+
+## Materialized Views
+
+In PostgreSQL, a materialized view is a physical copy of the result of a query that is stored on disk. Materialized views are useful for improving the performance of queries that involve complex calculations or aggregations. The following illustrates the basic 
+
+Think of a materialized view as a cache for the result of a query. When you create a materialized view, PostgreSQL executes the query and stores the result on disk. Subsequent queries can then retrieve the result from the materialized view instead of re-executing the query.
+
+syntax of creating a materialized view:
+
+```sql
+CREATE MATERIALIZED VIEW view_name AS
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table_name
+WHERE
+    condition;
+```
+
+In this syntax:
+
+- view_name is the name of the materialized view.
+- column1, column2, … are the columns that you want to retrieve data from.
+- table_name is the name of the table that you want to query data from.
+- condition is a boolean expression that evaluates to true or false.
+
+And to refresh the materialized view, you can use the `REFRESH MATERIALIZED VIEW` statement:
+
+```sql
+REFRESH MATERIALIZED VIEW view_name;
+```
+
+Materialized views are useful for improving the performance of queries that involve complex calculations or aggregations. They can help reduce the time it takes to execute queries by precomputing results and storing them on disk.
