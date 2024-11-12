@@ -679,3 +679,28 @@ In this syntax:
 - condition is a boolean expression that evaluates to true or false.
 
 Recursive CTEs allow you to define recursive queries that reference themselves. They are useful for querying hierarchical data structures, such as organization charts or bill of materials.
+
+## Views
+
+In PostgreSQL, a view is a virtual table that is based on the result of a query. Views allow you to encapsulate complex queries and reuse them in other queries. The following illustrates the basic syntax of creating a view:
+
+```sql
+CREATE VIEW view_name AS
+SELECT
+    column1,
+    column2,
+    ...
+FROM
+    table_name
+WHERE
+    condition;
+```
+
+In this syntax:
+
+- view_name is the name of the view.
+- column1, column2, … are the columns that you want to retrieve data from.
+- table_name is the name of the table that you want to query data from.
+- condition is a boolean expression that evaluates to true or false.
+
+Views allow you to encapsulate complex queries and reuse them in other queries. They are useful for simplifying queries and improving performance by precomputing results.
