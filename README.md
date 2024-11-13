@@ -766,3 +766,50 @@ ROLLBACK;
 ```
 
 The `ROLLBACK` statement discards the changes made in the transaction and rolls back to the beginning of the transaction.
+
+## Schema
+
+In PostgreSQL, a schema is a namespace that contains named database objects, such as tables, views, indexes, and sequences. Schemas allow you to organize database objects into logical groups and avoid naming conflicts. The following illustrates the basic syntax of creating a schema:
+
+```sql
+CREATE SCHEMA schema_name;
+```
+
+In this syntax:
+
+- schema_name is the name of the schema.
+
+You can create a table in a specific schema by specifying the schema name in the `CREATE TABLE` statement:
+
+```sql
+CREATE TABLE schema_name.table_name (
+    column1 datatype,
+    column2 datatype,
+    ...
+);
+```
+
+In this syntax:
+
+- schema_name is the name of the schema.
+- table_name is the name of the table.
+
+Schemas allow you to organize database objects into logical groups and avoid naming conflicts. They are useful for managing large databases with many tables, views, and other objects.
+
+You can also set the default schema for a user by using the `ALTER ROLE` statement:
+
+```sql
+ALTER ROLE username SET search_path TO schema_name;
+```
+
+To make sure which schema you are currently in, you can use the following query:
+
+```sql
+SELECT current_schema();
+```
+
+To determine the default schema for executing queries, you can use the following query:
+
+```sql
+SHOW search_path;
+```
