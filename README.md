@@ -813,3 +813,15 @@ To determine the default schema for executing queries, you can use the following
 ```sql
 SHOW search_path;
 ```
+
+To change the default schema for executing queries, you can use the following query:
+
+```sql
+SET search_path TO schema_name;
+```
+
+To undo the changes made to the default schema for executing queries, you can use the following query:
+
+```sql
+RESET search_path;
+```

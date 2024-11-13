@@ -14,4 +14,4 @@ SELECT current_schema();
 
 SHOW search_path;
 
-
+SET search_path TO schema_name;
