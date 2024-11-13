@@ -1,5 +1,38 @@
 # learning-pgsql
 
+This repository contains the notes I took while learning PostgreSQL.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Connect to Database](#connect-to-database)
+- [Create Database](#create-database)
+- [Create Table](#create-table)
+- [Insert Data](#insert-data)
+- [Fetch Data](#fetch-data)
+- [Filter Data](#filter-data)
+- [Update Data](#update-data)
+- [Delete Data](#delete-data)
+- [Aggregate Functions](#aggregate-functions)
+- [Group Data](#group-data)
+- [Order Data](#order-data)
+- [Joining Tables](#joining-tables)
+- [Pagination](#pagination)
+- [Unions](#unions)
+- [Intersections](#intersections)
+- [Differences](#differences)
+- [Subqueries](#subqueries)
+- [Indexes](#indexes)
+- [Benchmarks](#benchmarks)
+- [Common Table Expressions](#common-table-expressions)
+- [Recursive Common Table Expressions](#recursive-common-table-expressions)
+- [Views](#views)
+- [Materialized Views](#materialized-views)
+- [Transactions](#transactions)
+- [Schema](#schema)
+
 ## Create Database
 
 In PostgreSQL, **templates** are predefined databases used as starting points when creating new databases. They provide a structure and initial setup that can be cloned into a new database. PostgreSQL comes with two default templates: `template1` and `template0`.
