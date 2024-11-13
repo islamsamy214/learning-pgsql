@@ -4,10 +4,6 @@ This repository contains the notes I took while learning PostgreSQL.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Connect to Database](#connect-to-database)
 - [Create Database](#create-database)
 - [Create Table](#create-table)
 - [Insert Data](#insert-data)
