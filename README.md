@@ -817,7 +817,7 @@ SHOW search_path;
 To change the default schema for executing queries, you can use the following query:
 
 ```sql
-SET search_path TO schema_name;
+SET search_path TO "$user",schema_name;
 ```
 
 To undo the changes made to the default schema for executing queries, you can use the following query:
